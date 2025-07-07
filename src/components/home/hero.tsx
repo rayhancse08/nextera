@@ -158,51 +158,51 @@ const HomeHero: FC = () => {
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             {/* Sertificate badge */}
-            <Box
-              sx={{
-                position: 'absolute',
-                bottom: 30,
-                left: { xs: 0, md: -150 },
-                boxShadow: 1,
-                borderRadius: 3,
-                px: 2,
-                py: 1.4,
-                zIndex: 1,
-                backgroundColor: 'background.paper',
-                display: 'flex',
-                alignItems: 'flex-start',
-                width: 280,
-              }}
-            >
-              <Box
-                sx={{
-                  boxShadow: 1,
-                  borderRadius: '50%',
-                  width: 44,
-                  height: 44,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mr: 2,
-                  '& img': { width: '32px !important', height: 'auto' },
-                }}
-              >
-                <Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />
-              </Box>
-              <Box>
-                <Typography
-                  component="h6"
-                  sx={{ color: 'secondary.main', fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}
-                >
-                  Certificate
-                </Typography>
-                <Typography variant="subtitle1" sx={{ color: 'text.secondary', lineHeight: 1.3 }}>
-                  There are certificates for all courses.
-                </Typography>
-              </Box>
-            </Box>
+            {/*<Box*/}
+            {/*  sx={{*/}
+            {/*    position: 'absolute',*/}
+            {/*    bottom: 30,*/}
+            {/*    left: { xs: 0, md: -150 },*/}
+            {/*    boxShadow: 1,*/}
+            {/*    borderRadius: 3,*/}
+            {/*    px: 2,*/}
+            {/*    py: 1.4,*/}
+            {/*    zIndex: 1,*/}
+            {/*    backgroundColor: 'background.paper',*/}
+            {/*    display: 'flex',*/}
+            {/*    alignItems: 'flex-start',*/}
+            {/*    width: 280,*/}
+            {/*  }}*/}
+            {/*>*/}
+              {/*<Box*/}
+              {/*  sx={{*/}
+              {/*    boxShadow: 1,*/}
+              {/*    borderRadius: '50%',*/}
+              {/*    width: 44,*/}
+              {/*    height: 44,*/}
+              {/*    display: 'flex',*/}
+              {/*    alignItems: 'center',*/}
+              {/*    justifyContent: 'center',*/}
+              {/*    mr: 2,*/}
+              {/*    '& img': { width: '32px !important', height: 'auto' },*/}
+              {/*  }}*/}
+              {/*>*/}
+              {/*  /!*<Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />*!/*/}
+              {/*</Box>*/}
+              {/*<Box>*/}
+              {/*  /!*<Typography*!/*/}
+              {/*  /!*  component="h6"*!/*/}
+              {/*  /!*  sx={{ color: 'secondary.main', fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}*!/*/}
+              {/*  /!*>*!/*/}
+              {/*  /!*  Certificate*!/*/}
+              {/*  /!*</Typography>*!/*/}
+              {/*  /!*<Typography variant="subtitle1" sx={{ color: 'text.secondary', lineHeight: 1.3 }}>*!/*/}
+              {/*  /!*  There are certificates for all courses.*!/*/}
+              {/*  /!*</Typography>*!/*/}
+              {/*</Box>*/}
+            {/*</Box>*/}
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" />
+              <Image src="/images/banner.png" width={1056} height={821} alt="Hero img" />
             </Box>
           </Grid>
         </Grid>
