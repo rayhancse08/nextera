@@ -8,7 +8,7 @@ import { FooterSectionTitle } from '@/components/footer'
 
 const courseMenu: Array<Navigation> = [
   {
-    label: 'UI/UX Design',
+    label: 'Web Development',
     path: '#',
   },
   {
@@ -16,23 +16,23 @@ const courseMenu: Array<Navigation> = [
     path: '#',
   },
   {
-    label: 'Machine Learning',
+    label: 'AI and Automation',
     path: '#',
   },
   {
-    label: 'Web Development',
+    label: 'Cloud Solution',
     path: '#',
   },
 ]
 
 const pageMenu = headerNavigations
 
-const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '#' },
-  { label: 'Privacy & Policy', path: '#' },
-  { label: 'Term & Condition', path: '#' },
-  { label: 'FAQ', path: '#' },
-]
+// const companyMenu: Array<Navigation> = [
+//   { label: 'Contact Us', path: '#' },
+//   { label: 'Privacy & Policy', path: '#' },
+//   { label: 'Term & Condition', path: '#' },
+//   { label: 'FAQ', path: '#' },
+// ]
 
 interface NavigationItemProps {
   label: string
@@ -60,7 +60,7 @@ const FooterNavigation: FC = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} md={4}>
-        <FooterSectionTitle title="Course" />
+        <FooterSectionTitle title="Service" />
         {courseMenu.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={/* path */ '#'} />
         ))}
@@ -71,12 +71,12 @@ const FooterNavigation: FC = () => {
           <NavigationItem key={index + path} label={label} path={path} />
         ))}
       </Grid>
-      <Grid item xs={12} md={4}>
-        <FooterSectionTitle title="About" />
-        {companyMenu.map(({ label, path }, index) => (
-          <NavigationItem key={index + path} label={label} path={path} />
-        ))}
-      </Grid>
+      {/*<Grid item xs={12} md={4}>*/}
+      {/*  <FooterSectionTitle title="About" />*/}
+      {/*  {companyMenu.map(({ label, path }, index) => (*/}
+      {/*    <NavigationItem key={index + path} label={label} path={path} />*/}
+      {/*  ))}*/}
+      {/*</Grid>*/}
     </Grid>
   )
 }

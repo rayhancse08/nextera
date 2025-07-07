@@ -16,12 +16,12 @@ const Footer: FC = () => {
           <Grid item xs={12} md={5}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
-                Coursespace
+                Nextera Technologies
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Coursespace is an online learning platform that has been operating since 2018 until now.
+                Nextera Technologies is a forward-thinking software company established in 2024. We specialize in delivering modern, scalable, and high-performance digital solutions for businesses of all sizes. From full-stack web development using Next.js and Django to mobile apps, cloud integration, and AI-powered tools, Nextera combines cutting-edge technologies with industry best practices to drive real results. Our mission is to empower organizations through clean code, intuitive design, and smart automation
               </Typography>
-              <FooterSocialLinks />
+              {/*<FooterSocialLinks />*/}
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>

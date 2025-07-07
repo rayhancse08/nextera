@@ -10,16 +10,19 @@ const DynamicHomePopularCourse = dynamic(() => import('../components/home/popula
 const DynamicHomeTestimonial = dynamic(() => import('../components/home/testimonial'))
 const DynamicHomeOurMentors = dynamic(() => import('../components/home/mentors'))
 const DynamicHomeNewsLetter = dynamic(() => import('../components/home/newsletter'))
-
+const HomePortfolio = dynamic(() => import('../components/home/portfolio'))
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeHero />
+      {/*<DynamicHomeHero />*/}
+
       <DynamicHomePopularCourse />
-      <DynamicHomeFeature />
-      <DynamicHomeTestimonial />
+      {/*<DynamicHomeFeature />*/}
+      {/*<DynamicHomeTestimonial />*/}
+        <HomePortfolio></HomePortfolio>
       <DynamicHomeOurMentors />
-      <DynamicHomeNewsLetter />
+      {/*<DynamicHomeNewsLetter />*/}
+        {/*<DynamicServices></DynamicServices>*/}
     </>
   )
 }
