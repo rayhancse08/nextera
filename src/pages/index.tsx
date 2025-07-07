@@ -14,7 +14,7 @@ const HomePortfolio = dynamic(() => import('../components/home/portfolio'))
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      {/*<DynamicHomeHero />*/}
+      <DynamicHomeHero />
 
       <DynamicHomePopularCourse />
       {/*<DynamicHomeFeature />*/}

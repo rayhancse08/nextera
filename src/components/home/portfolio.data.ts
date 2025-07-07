@@ -4,8 +4,7 @@ export const data = [
         image: '/images/portfolio/visamate.png',
         title: 'VisaMate',
         stack: ['Next.js', 'Django', 'PostgreSQL','OpenAI API','AI'],
-        description: 'A full-stack web application(Next.js and Django) streamlining the visa application review, and approval process for applicants and administrative staff.\n' +
-            'The platform will offer a user-friendly interface, status tracking, document submission, assessment,drafting,appointment scheduling, and secure communications using OpenAI (ChatGPT) and other third-party API.',
+        description: 'A full-stack web app (Next.js & Django) to streamline visa application processing, featuring user-friendly interfaces, status tracking, document uploads, assessments, appointment scheduling, and secure communication using OpenAI (ChatGPT) and third-party APIs',
         link: 'https://visamate.vercel.app/',
     },
     {

@@ -9,7 +9,6 @@ import { useTheme, styled } from '@mui/material/styles'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import PortfolioCardItem from '@/components/portfolio'
-
 import { data } from './portfolio.data'
 
 interface SliderArrowProps {
@@ -89,7 +88,24 @@ const HomePortfolio = (): JSX.Element => {
 
                 <Slider {...sliderConfig}>
                     {data.map((item) => (
-                        <PortfolioCardItem key={item.id} item={item} />
+                        <Box
+                            key={item.id}
+                            sx={{
+                                px: 1,
+                                display: 'flex',
+                                height: 450, // FIXED HEIGHT
+                                width: '100%',
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    width: '100%',
+                                    height: '100%',
+                                }}
+                            >
+                                <PortfolioCardItem item={item} />
+                            </Box>
+                        </Box>
                     ))}
                 </Slider>
             </Container>

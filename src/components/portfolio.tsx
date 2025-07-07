@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { Box, Typography, Chip } from '@mui/material'
 
 interface PortfolioItem {
     id: number
@@ -10,75 +11,76 @@ interface PortfolioItem {
     link: string
 }
 
-interface PortfolioCardItemProps {
+interface Props {
     item: PortfolioItem
 }
 
-const PortfolioCardItem = ({ item }: PortfolioCardItemProps): JSX.Element => {
+const PortfolioCardItem = ({ item }: Props): JSX.Element => {
     return (
-        <div
-            style={{
+        <Box
+            sx={{
                 backgroundColor: '#fff',
-                borderRadius: '12px',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                padding: '20px',
-                textAlign: 'center',
-                height: '100%',
+                borderRadius: 2,
+                boxShadow: 3,
+                padding: 2,
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between',
+                height: '100%',
+                width: '100%',
             }}
         >
-            <Image
-                src={item.image}
-                alt={item.title}
-                width={400}
-                height={250}
-                style={{
-                    objectFit: 'cover',
-                    borderRadius: '8px',
-                    marginBottom: '16px',
-                }}
-            />
+            {/* Top content that grows */}
+            <Box sx={{ flexGrow: 1 }}>
+                <Box
+                    sx={{
+                        width: '100%',
+                        height: 180,
+                        position: 'relative',
+                        borderRadius: 2,
+                        overflow: 'hidden',
+                        mb: 2,
+                    }}
+                >
+                    <Image src={item.image} alt={item.title} layout="fill" objectFit="cover" />
+                </Box>
 
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '8px' }}>{item.title}</h3>
+                <Typography variant="h6" gutterBottom>
+                    {item.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    {item.description}
+                </Typography>
 
-            <p style={{ fontSize: '0.95rem', color: '#555', marginBottom: '12px' }}>{item.description}</p>
+                <Box sx={{ mt: 1, display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                    {item.stack.map((tech, index) => (
+                        <Chip
+                            key={index}
+                            label={tech}
+                            size="small"
+                            sx={{ backgroundColor: '#eef1f4', color: '#333' }}
+                        />
+                    ))}
+                </Box>
+            </Box>
 
-            <div style={{ marginBottom: '12px' }}>
-                {item.stack.map((tech, index) => (
-                    <span
-                        key={index}
-                        style={{
-                            display: 'inline-block',
-                            backgroundColor: '#eef1f4',
-                            color: '#333',
-                            borderRadius: '6px',
-                            padding: '4px 10px',
-                            fontSize: '0.75rem',
-                            marginRight: '6px',
-                        }}
-                    >
-            {tech}
-          </span>
-                ))}
-            </div>
-
-            <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                    display: 'inline-block',
-                    marginTop: 'auto',
-                    color: '#0070f3',
-                    textDecoration: 'underline',
-                    fontWeight: 500,
-                }}
-            >
-                View Project
-            </a>
-        </div>
+            {/* View Project link pinned to bottom with spacing */}
+            <Box sx={{ mt: 3 }}>
+                <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        color: '#0070f3',
+                        textDecoration: 'underline',
+                        fontWeight: 500,
+                        fontSize: '0.9rem',
+                        display: 'inline-block',
+                    }}
+                >
+                    View Project →
+                </a>
+            </Box>
+        </Box>
     )
 }
 
