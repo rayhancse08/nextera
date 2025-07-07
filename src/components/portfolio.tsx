@@ -1,30 +1,85 @@
 import React from 'react'
-import { Card, CardContent, Typography, Box, Button, Chip, Stack } from '@mui/material'
+import Image from 'next/image'
 
-export const PortfolioCardItem = ({ item }: { item: any }) => {
+interface PortfolioItem {
+    id: number
+    image: string
+    title: string
+    description: string
+    stack: string[]
+    link: string
+}
+
+interface PortfolioCardItemProps {
+    item: PortfolioItem
+}
+
+const PortfolioCardItem = ({ item }: PortfolioCardItemProps): JSX.Element => {
     return (
-        <Card sx={{ borderRadius: 3, overflow: 'hidden', m: 1 }}>
-            <img src={item.image} alt={item.title} width="100%" height="200px" style={{ objectFit: 'cover' }} />
-            <CardContent>
-                <Typography variant="h6" gutterBottom>{item.title}</Typography>
-                <Stack direction="row" spacing={1} sx={{ mb: 1, flexWrap: 'wrap' }}>
-                    {item.stack.map((tech: string, index: number) => (
-                        <Chip key={index} label={tech} size="small" />
-                    ))}
-                </Stack>
-                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                    {item.description}
-                </Typography>
-                <Button
-                    variant="contained"
-                    size="small"
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Project
-                </Button>
-            </CardContent>
-        </Card>
+        <div
+            style={{
+                backgroundColor: '#fff',
+                borderRadius: '12px',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                padding: '20px',
+                textAlign: 'center',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Image
+                src={item.image}
+                alt={item.title}
+                width={400}
+                height={250}
+                style={{
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    marginBottom: '16px',
+                }}
+            />
+
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '8px' }}>{item.title}</h3>
+
+            <p style={{ fontSize: '0.95rem', color: '#555', marginBottom: '12px' }}>{item.description}</p>
+
+            <div style={{ marginBottom: '12px' }}>
+                {item.stack.map((tech, index) => (
+                    <span
+                        key={index}
+                        style={{
+                            display: 'inline-block',
+                            backgroundColor: '#eef1f4',
+                            color: '#333',
+                            borderRadius: '6px',
+                            padding: '4px 10px',
+                            fontSize: '0.75rem',
+                            marginRight: '6px',
+                        }}
+                    >
+            {tech}
+          </span>
+                ))}
+            </div>
+
+            <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                    display: 'inline-block',
+                    marginTop: 'auto',
+                    color: '#0070f3',
+                    textDecoration: 'underline',
+                    fontWeight: 500,
+                }}
+            >
+                View Project
+            </a>
+        </div>
     )
 }
+
+export default PortfolioCardItem

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import Box from '@mui/material/Box'
 import Slider, { Settings } from 'react-slick'
 import Container from '@mui/material/Container'
@@ -8,16 +8,17 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme, styled } from '@mui/material/styles'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
-import { PortfolioCardItem } from '@/components/portfolio'
+import PortfolioCardItem from '@/components/portfolio'
+
 import { data } from './portfolio.data'
 
-interface SliderArrowArrow {
+interface SliderArrowProps {
     onClick?: () => void
     type: 'next' | 'prev'
     className?: string
 }
 
-const SliderArrow: FC<SliderArrowArrow> = ({ onClick, type, className }) => (
+const SliderArrow: React.FC<SliderArrowProps> = ({ onClick, type, className }) => (
     <IconButton
         sx={{
             backgroundColor: 'background.paper',
@@ -47,7 +48,7 @@ const StyledDots = styled('ul')(({ theme }) => ({
         textAlign: 'left',
         '& li': {
             marginRight: theme.spacing(2),
-            '&.slick-active>div': {
+            '&.slick-active > div': {
                 backgroundColor: theme.palette.primary.main,
             },
         },
@@ -55,8 +56,8 @@ const StyledDots = styled('ul')(({ theme }) => ({
 }))
 
 const HomePortfolio = (): JSX.Element => {
-    const { breakpoints } = useTheme()
-    const isMobile = useMediaQuery(breakpoints.down('md'))
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
     const sliderConfig: Settings = {
         infinite: true,
@@ -95,6 +96,5 @@ const HomePortfolio = (): JSX.Element => {
         </Box>
     )
 }
-
 
 export default HomePortfolio
