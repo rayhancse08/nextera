@@ -11,16 +11,16 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'Portfolio',
-    path: 'projects',
+    path: 'portfolio',
   },
   // {
   //   label: 'About Us',
   //   path: 'about',
   // },
-  // {
-  //   label: 'Team',
-  //   path: 'team',
-  // },
+  {
+    label: 'Team',
+    path: 'team',
+  },
   // {
   //   label: 'Testimonials',
   //   path: 'testimonials',
