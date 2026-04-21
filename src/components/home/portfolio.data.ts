@@ -1,14 +1,24 @@
 export const data = [
     {
         id: 1,
-        image: '/images/portfolio/visamate.png',
-        title: 'VisaMate',
-        stack: ['Next.js', 'Django', 'PostgreSQL','OpenAI API','AI'],
-        description: 'A full-stack web app (Next.js & Django) to streamline visa application processing, featuring user-friendly interfaces, status tracking, document uploads, assessments, appointment scheduling, and secure communication using OpenAI (ChatGPT) and third-party APIs',
-        link: 'https://visamate.vercel.app/',
+        image: '/images/portfolio/clarvo.png',
+        title: 'Clarvo',
+        stack: ['Next.js', 'Django', 'PostgreSQL','Claude','OpenAI API','AI'],
+        description: 'A full-stack B2C web app (Next.js & Django) to streamline visa application processing, featuring user-friendly interfaces, status tracking, document uploads, assessments, appointment scheduling, and secure communication using OpenAI (ChatGPT) and third-party APIs',
+        link: 'https://clarvo.us/',
     },
+
     {
         id: 2,
+        image: '/images/portfolio/casenexus.png',
+        title: 'CaseNexus',
+        stack: ['Next.js', 'Django', 'PostgreSQL','Claude','OpenAI API','AI',],
+        description: 'A full-stack B2B web app (Next.js & Django) to streamline visa application processing, featuring user-friendly interfaces, status tracking, document uploads, assessments, appointment scheduling, and secure communication using OpenAI (ChatGPT) and third-party APIs',
+        link: 'https://casenexus.us/',
+    },
+
+    {
+        id: 3,
         image: '/images/portfolio/kotha.png',
         title: 'Kotha',
         stack: ['Next.js'],
@@ -16,7 +26,7 @@ export const data = [
         link: 'https://web.kotha.app/',
     },
     {
-        id: 3,
+        id: 4,
         image: '/images/portfolio/kdelight.png',
         title: 'E-commerce Platform',
         stack: ['Next.js', 'Django', 'Stripe','Django REST'],
@@ -24,7 +34,7 @@ export const data = [
         link: 'https://www.kdelightwholesale.com/',
     },
     {
-        id: 4,
+        id: 5,
         image: '/images/portfolio/inventory.png',
         title: 'Inventory Management',
         stack: ['Django', 'PostgreSQL'],
@@ -32,7 +42,7 @@ export const data = [
         link: 'https://kdelight.info/admin/',
     },
     {
-        id: 5,
+        id: 6,
         image: '/images/portfolio/tourist.png',
         title: 'Tour Guide Website',
         stack: ['Django', 'PostgreSQL', 'Bootstrap'],
