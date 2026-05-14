@@ -23,10 +23,14 @@ const CourseCardItem: FC<Props> = ({ item }) => {
         sx={{
           p: 2,
           backgroundColor: 'background.paper',
-          borderRadius: 4,
-          transition: (theme) => theme.transitions.create(['box-shadow']),
+          borderRadius: 3,
+          border: '1px solid',
+          borderColor: 'rgba(15, 23, 42, 0.06)',
+          transition: (theme) => theme.transitions.create(['box-shadow', 'transform', 'border-color']),
           '&:hover': {
-            boxShadow: 2,
+            boxShadow: '0 20px 40px -16px rgba(15, 23, 42, 0.15)',
+            transform: 'translateY(-4px)',
+            borderColor: 'rgba(13, 148, 136, 0.35)',
             [`& .${iconButtonClasses.root}`]: {
               backgroundColor: 'primary.main',
               color: 'primary.contrastText',

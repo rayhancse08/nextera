@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick.css'
 import '@/styles/globals.css'
 import '@/styles/react-slick.css'
 import { NextPageWithLayout } from '@/interfaces/layout'
+import { siteConfig } from '@/config/site'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -30,7 +31,11 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <title>Nextera Technologies</title>
+        <title>{`${siteConfig.name} | Custom software, web apps & AI-enabled products`}</title>
+        <meta name="description" content={siteConfig.metaDescription} />
+        <meta property="og:title" content={`${siteConfig.name} | Custom software & product engineering`} />
+        <meta property="og:description" content={siteConfig.metaDescription} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <MUIProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

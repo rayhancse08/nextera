@@ -78,13 +78,24 @@ const HomePortfolio = (): JSX.Element => {
             sx={{
                 pt: { xs: 6, md: 8 },
                 pb: { xs: 8, md: 12 },
-                backgroundColor: '#f7fafa',
+                background: 'linear-gradient(180deg, #ffffff 0%, #f0f4f8 100%)',
             }}
         >
             <Container maxWidth="lg">
-                <Typography variant="h1" sx={{ fontSize: 40, mb: 4 }}>
-                    Our Portfolio
-                </Typography>
+        <Box sx={{ mb: 4, textAlign: { xs: 'center', md: 'left' } }}>
+          <Typography
+            variant="overline"
+            sx={{ color: 'primary.main', fontWeight: 800, letterSpacing: 2, fontSize: '0.7rem' }}
+          >
+            Case studies
+          </Typography>
+          <Typography variant="h2" sx={{ fontWeight: 800, letterSpacing: -0.5, fontSize: { xs: '1.75rem', md: '2.25rem' }, mt: 1 }}>
+            Portfolio
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1, maxWidth: 480 }}>
+            Selected work across products, platforms, and integrations.
+          </Typography>
+        </Box>
 
                 <Slider {...sliderConfig}>
                     {data.map((item) => (
@@ -93,14 +104,17 @@ const HomePortfolio = (): JSX.Element => {
                             sx={{
                                 px: 1,
                                 display: 'flex',
-                                height: 450, // FIXED HEIGHT
+                                height: { xs: 520, md: 480 },
                                 width: '100%',
+                                minHeight: 0,
                             }}
                         >
                             <Box
                                 sx={{
                                     width: '100%',
                                     height: '100%',
+                                    minHeight: 0,
+                                    display: 'flex',
                                 }}
                             >
                                 <PortfolioCardItem item={item} />

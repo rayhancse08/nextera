@@ -13,6 +13,9 @@ const createTheme = (darkMode?: boolean): Theme => {
     palette,
     typography,
     shadows,
+    shape: {
+      borderRadius: 12,
+    },
   })
 }
 

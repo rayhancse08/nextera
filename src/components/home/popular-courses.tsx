@@ -86,28 +86,55 @@ const HomePopularCourse: FC = () => {
           md: 8,
         },
         pb: 14,
-        backgroundColor: 'background.default',
+        background: 'linear-gradient(180deg, #f0f4f8 0%, #e8eef5 100%)',
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={3}>
+        <Grid container spacing={2} alignItems="flex-end">
+          <Grid item xs={12} md={4}>
             <Box
               sx={{
                 height: '100%',
-                width: { xs: '100%', md: '90%' },
+                width: { xs: '100%', md: '100%' },
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: { xs: 'center', md: 'flex-start' },
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: { xs: 'center', md: 'flex-start' },
+                textAlign: { xs: 'center', md: 'left' },
+                gap: 1,
+                mb: { xs: 2, md: 0 },
               }}
             >
-              <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
-                Our Services
+              <Typography
+                variant="overline"
+                sx={{
+                  color: 'primary.main',
+                  fontWeight: 800,
+                  letterSpacing: 2,
+                  fontSize: '0.7rem',
+                }}
+              >
+                What we ship
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  mt: { xs: 0, md: -1 },
+                  fontSize: { xs: '1.75rem', md: '2.25rem' },
+                  fontWeight: 800,
+                  letterSpacing: -0.5,
+                  color: 'text.primary',
+                }}
+              >
+                Services built for scale
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ maxWidth: 320 }}>
+                From discovery to launch, we align engineering with your roadmap.
               </Typography>
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={9}>
+          <Grid item xs={12} md={8}>
             <Slider {...sliderConfig}>
               {data.map((item) => (
                 <CourseCardItem key={String(item.id)} item={item} />

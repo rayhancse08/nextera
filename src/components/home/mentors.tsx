@@ -88,13 +88,24 @@ const HomeOurMentors: FC = () => {
           xs: 8,
           md: 12,
         },
-        backgroundColor: '#ecf3f3',
+        background: 'linear-gradient(180deg, #e8f4f3 0%, #f0f4f8 100%)',
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h1" sx={{ fontSize: 40 }}>
-          Our Team
-        </Typography>
+        <Box sx={{ mb: 4, textAlign: { xs: 'center', md: 'left' } }}>
+          <Typography
+            variant="overline"
+            sx={{ color: 'primary.main', fontWeight: 800, letterSpacing: 2, fontSize: '0.7rem' }}
+          >
+            People
+          </Typography>
+          <Typography variant="h2" sx={{ fontWeight: 800, letterSpacing: -0.5, fontSize: { xs: '1.75rem', md: '2.25rem' }, mt: 1 }}>
+            Our team
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1, maxWidth: 520 }}>
+            Engineers and designers who care about craft, clarity, and long-term maintainability.
+          </Typography>
+        </Box>
 
         <Slider {...sliderConfig}>
           {data.map((item) => (

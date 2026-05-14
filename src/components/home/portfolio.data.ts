@@ -27,11 +27,11 @@ export const data = [
     },
     {
         id: 4,
-        image: '/images/portfolio/kdelight.png',
-        title: 'E-commerce Platform',
+        image: '/images/portfolio/deshishad.png',
+        title: 'Deshi Shad',
         stack: ['Next.js', 'Django', 'Stripe','Django REST'],
         description: 'Full-featured store with product catalog, checkout, and order management.',
-        link: 'https://www.kdelightwholesale.com/',
+        link: 'https://www.deshishadusa.com',
     },
     {
         id: 5,

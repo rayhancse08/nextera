@@ -4,7 +4,7 @@ import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { Logo } from '@/components/logo'
-import { Navigation, AuthNavigation } from '@/components/navigation'
+import { Navigation } from '@/components/navigation'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
 
@@ -14,12 +14,24 @@ const Header: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
   return (
-    <Box sx={{ backgroundColor: 'background.paper' }}>
-      <Container sx={{ py: { xs: 2, md: 3 } }}>
+    <Box
+      component="header"
+      sx={{
+        position: 'sticky',
+        top: 0,
+        zIndex: (theme) => theme.zIndex.appBar,
+        backgroundColor: 'rgba(255, 255, 255, 0.82)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderBottom: '1px solid',
+        borderColor: 'rgba(15, 23, 42, 0.06)',
+      }}
+    >
+      <Container sx={{ py: { xs: 1.5, md: 2 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Logo />
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>
-            <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
+            <IconButton onClick={() => setVisibleMenu(!visibleMenu)} aria-label="Open menu">
               <Menu />
             </IconButton>
           </Box>
@@ -30,7 +42,6 @@ const Header: FC = () => {
               alignItems: 'center',
               justifyContent: 'space-between',
               flexDirection: { xs: 'column', md: 'row' },
-
               transition: (theme) => theme.transitions.create(['top']),
               ...(matchMobileView && {
                 py: 6,
@@ -43,9 +54,8 @@ const Header: FC = () => {
               }),
             }}
           >
-            <Box /> {/* Magic space */}
+            <Box />
             <Navigation />
-            {/*<AuthNavigation />*/}
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
@@ -54,6 +64,7 @@ const Header: FC = () => {
                   right: 10,
                 }}
                 onClick={() => setVisibleMenu(!visibleMenu)}
+                aria-label="Close menu"
               >
                 <Close />
               </IconButton>

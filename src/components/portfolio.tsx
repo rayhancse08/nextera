@@ -27,10 +27,20 @@ const PortfolioCardItem = ({ item }: Props): JSX.Element => {
                 flexDirection: 'column',
                 height: '100%',
                 width: '100%',
+                minHeight: 0,
             }}
         >
-            {/* Top content that grows */}
-            <Box sx={{ flexGrow: 1 }}>
+            {/* Scroll when copy + chips are long; keeps “View project” in the slide and clickable */}
+            <Box
+                sx={{
+                    flex: 1,
+                    minHeight: 0,
+                    overflowY: 'auto',
+                    overflowX: 'hidden',
+                    WebkitOverflowScrolling: 'touch',
+                    pr: 0.25,
+                }}
+            >
                 <Box
                     sx={{
                         width: '100%',
@@ -39,15 +49,16 @@ const PortfolioCardItem = ({ item }: Props): JSX.Element => {
                         borderRadius: 2,
                         overflow: 'hidden',
                         mb: 2,
+                        flexShrink: 0,
                     }}
                 >
                     <Image src={item.image} alt={item.title} layout="fill" objectFit="cover" />
                 </Box>
 
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" gutterBottom component="h3">
                     {item.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ wordBreak: 'break-word' }}>
                     {item.description}
                 </Typography>
 
@@ -63,22 +74,33 @@ const PortfolioCardItem = ({ item }: Props): JSX.Element => {
                 </Box>
             </Box>
 
-            {/* View Project link pinned to bottom with spacing */}
-            <Box sx={{ mt: 3 }}>
-                <a
+            <Box
+                sx={{
+                    flexShrink: 0,
+                    pt: 2,
+                    mt: 'auto',
+                    borderTop: '1px solid',
+                    borderColor: 'divider',
+                    bgcolor: 'background.paper',
+                }}
+            >
+                <Box
+                    component="a"
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                        color: '#0070f3',
+                    sx={{
+                        color: 'primary.main',
                         textDecoration: 'underline',
-                        fontWeight: 500,
+                        fontWeight: 600,
                         fontSize: '0.9rem',
                         display: 'inline-block',
+                        cursor: 'pointer',
+                        '&:hover': { color: 'primary.dark' },
                     }}
                 >
                     View Project →
-                </a>
+                </Box>
             </Box>
         </Box>
     )

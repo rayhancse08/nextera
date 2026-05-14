@@ -1,5 +1,4 @@
 import React from 'react'
-import theme from '@/config/theme'
 import { NextComponentType } from 'next'
 import { AppInitialProps } from 'next/app'
 import { EmotionCache } from '@emotion/cache'
@@ -22,17 +21,15 @@ class MyDocument extends Document<DocumentProps> {
           <meta name="viewport" content="initial-scale=1, width=device-width" />
 
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.background.paper} />
-
-          <meta content="#fbfbfb" name="theme-color" />
-          <meta content="#fbfbfb" name="msapplication-navbutton-color" />
-          <meta content="#fbfbfb" name="apple-mobile-web-app-status-bar-style" />
+          <meta name="theme-color" content="#0f172a" />
+          <meta content="#0f172a" name="msapplication-navbutton-color" />
+          <meta content="#0f172a" name="apple-mobile-web-app-status-bar-style" />
           <meta content="yes" name="apple-mobile-web-app-capable" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
             rel="stylesheet"
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}

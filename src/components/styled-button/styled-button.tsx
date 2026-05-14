@@ -97,7 +97,7 @@ const StyledButtonRoot = styled('button', {
     variant === 'contained' && {
       backgroundColor: theme.palette.primary.main,
       color: theme.palette.primary.contrastText,
-      boxShadow: '0 6px 22px 0 rgb(18 124 113 / 12%)',
+      boxShadow: '0 6px 22px 0 rgb(13 148 136 / 18%)',
     }),
   ...(color === 'secondary' &&
     variant === 'contained' && {
