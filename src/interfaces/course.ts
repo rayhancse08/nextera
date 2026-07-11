@@ -6,5 +6,6 @@ export interface Course {
   ratingCount: number
   price: number
   category: string
-  description:string|null,
+  description: string | null
+  highlights?: string[]
 }

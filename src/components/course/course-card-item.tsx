@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
-import Rating from '@mui/material/Rating'
 import Typography from '@mui/material/Typography'
-import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
-import ArrowForward from '@mui/icons-material/ArrowForward'
+import Chip from '@mui/material/Chip'
+import Stack from '@mui/material/Stack'
+import CheckCircleOutline from '@mui/icons-material/CheckCircleOutline'
 import { Course } from '@/interfaces/course'
 
 interface Props {
@@ -13,15 +13,11 @@ interface Props {
 
 const CourseCardItem: FC<Props> = ({ item }) => {
   return (
-    <Box
-      sx={{
-        px: 1,
-        py: 4,
-      }}
-    >
-      <Box
+    <Box sx={{ px: 1, py: 4, height: '100%' }}>
+      <Stack
         sx={{
-          p: 2,
+          height: '100%',
+          p: 2.5,
           backgroundColor: 'background.paper',
           borderRadius: 3,
           border: '1px solid',
@@ -31,50 +27,46 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             boxShadow: '0 20px 40px -16px rgba(15, 23, 42, 0.15)',
             transform: 'translateY(-4px)',
             borderColor: 'rgba(13, 148, 136, 0.35)',
-            [`& .${iconButtonClasses.root}`]: {
-              backgroundColor: 'primary.main',
-              color: 'primary.contrastText',
-              boxShadow: 2,
-            },
           },
         }}
       >
-        <Box
-          sx={{
-            lineHeight: 0,
-            overflow: 'hidden',
-            borderRadius: 3,
-            mb: 2,
-          }}
-        >
-          <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
+        <Box sx={{ lineHeight: 0, overflow: 'hidden', borderRadius: 2, mb: 2, position: 'relative' }}>
+          <Image src={item.cover} width={760} height={760} alt={item.title} />
+          <Chip
+            label={item.category}
+            size="small"
+            sx={{
+              position: 'absolute',
+              top: 12,
+              left: 12,
+              fontWeight: 700,
+              bgcolor: 'rgba(255,255,255,0.95)',
+              color: 'primary.dark',
+            }}
+          />
         </Box>
-        <Box sx={{ mb: 2 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
-            {item.title}
-          </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {/*<Rating name="rating-course" value={item.rating} max={5} sx={{ color: '#ffce31', mr: 1 }} readOnly />*/}
-            <Typography component="span" variant="h5">
-              {item.description}
-            </Typography>
-          </Box>
-        </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          {/*<Box sx={{ display: 'flex', alignItems: 'center' }}>*/}
-          {/*  <Typography variant="h5" color="primary.main">*/}
-          {/*    {'$' + item.price}*/}
-          {/*  </Typography>*/}
-          {/*  <Typography variant="h6">/ course</Typography>*/}
-          {/*</Box>*/}
-          <IconButton
-            color="primary"
-            sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
-          >
-            <ArrowForward />
-          </IconButton>
-        </Box>
-      </Box>
+
+        <Typography component="h3" variant="h6" sx={{ fontWeight: 800, mb: 1 }}>
+          {item.title}
+        </Typography>
+
+        <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.65, mb: 2, flexGrow: 0 }}>
+          {item.description}
+        </Typography>
+
+        {item.highlights && item.highlights.length > 0 ? (
+          <Stack spacing={0.75} sx={{ mt: 'auto' }}>
+            {item.highlights.map((point) => (
+              <Stack key={point} direction="row" spacing={1} alignItems="flex-start">
+                <CheckCircleOutline sx={{ fontSize: 16, color: 'primary.main', mt: 0.25 }} />
+                <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.5 }}>
+                  {point}
+                </Typography>
+              </Stack>
+            ))}
+          </Stack>
+        ) : null}
+      </Stack>
     </Box>
   )
 }

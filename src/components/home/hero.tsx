@@ -96,7 +96,8 @@ const HomeHero: FC = () => {
                 }}
               >
                 Nextera designs and ships reliable web platforms, integrations, and intelligent tools—so your team can
-                focus on growth while we handle the engineering.
+                focus on growth while we handle the engineering. From visa tech and e-commerce to social apps and
+                internal systems, we deliver production-ready software.
               </Typography>
 
               <Stack
@@ -132,9 +133,9 @@ const HomeHero: FC = () => {
                 }}
               >
                 {[
+                  { value: '10+', label: 'Live products' },
                   { value: '2024', label: 'Founded' },
-                  { value: 'End-to-end', label: 'Delivery' },
-                  { value: 'Quality-first', label: 'Engineering' },
+                  { value: 'Next.js & Django', label: 'Core stack' },
                 ].map((stat) => (
                   <Box key={stat.label} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                     <Typography sx={{ fontWeight: 800, fontSize: '1.25rem', color: 'primary.dark' }}>

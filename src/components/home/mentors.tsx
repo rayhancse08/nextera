@@ -103,7 +103,7 @@ const HomeOurMentors: FC = () => {
             Our team
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1, maxWidth: 520 }}>
-            Engineers and designers who care about craft, clarity, and long-term maintainability.
+            Leadership and engineers who ship—transparent communication from kickoff to launch.
           </Typography>
         </Box>
 

@@ -9,6 +9,7 @@ import { siteConfig } from '@/config/site'
 
 const footerLinks: { label: string; to: string }[] = [
   { label: 'Home', to: 'hero' },
+  { label: 'About', to: 'about' },
   { label: 'Services', to: 'services' },
   { label: 'Why us', to: 'why-us' },
   { label: 'Process', to: 'process' },

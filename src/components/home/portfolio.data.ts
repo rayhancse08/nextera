@@ -1,54 +1,118 @@
 export const data = [
-    {
-        id: 1,
-        image: '/images/portfolio/clarvo.png',
-        title: 'Clarvo',
-        stack: ['Next.js', 'Django', 'PostgreSQL','Claude','OpenAI API','AI'],
-        description: 'A full-stack B2C web app (Next.js & Django) to streamline visa application processing, featuring user-friendly interfaces, status tracking, document uploads, assessments, appointment scheduling, and secure communication using OpenAI (ChatGPT) and third-party APIs',
-        link: 'https://clarvo.us/',
-    },
-
-    {
-        id: 2,
-        image: '/images/portfolio/casenexus.png',
-        title: 'CaseNexus',
-        stack: ['Next.js', 'Django', 'PostgreSQL','Claude','OpenAI API','AI',],
-        description: 'A full-stack B2B web app (Next.js & Django) to streamline visa application processing, featuring user-friendly interfaces, status tracking, document uploads, assessments, appointment scheduling, and secure communication using OpenAI (ChatGPT) and third-party APIs',
-        link: 'https://casenexus.us/',
-    },
-
-    {
-        id: 3,
-        image: '/images/portfolio/kotha.png',
-        title: 'Kotha',
-        stack: ['Next.js'],
-        description: 'Social media, Communications, Lifestyle app, Social Network, and App. Working on Voice post, Community, Chat, and WebSocket.',
-        link: 'https://web.kotha.app/',
-    },
-    {
-        id: 4,
-        image: '/images/portfolio/deshishad.png',
-        title: 'Deshi Shad',
-        stack: ['Next.js', 'Django', 'Stripe','Django REST'],
-        description: 'Full-featured store with product catalog, checkout, and order management.',
-        link: 'https://www.deshishadusa.com',
-    },
-    {
-        id: 5,
-        image: '/images/portfolio/inventory.png',
-        title: 'Inventory Management',
-        stack: ['Django', 'PostgreSQL'],
-        description: 'A robust inventory management system built with Django and PostgreSQL, offering real-time stock tracking, supplier management, purchase history, and role-based access control for streamlined warehouse operations.',
-        link: 'https://kdelight.info/admin/',
-    },
-    {
-        id: 6,
-        image: '/images/portfolio/tourist.png',
-        title: 'Tour Guide Website',
-        stack: ['Django', 'PostgreSQL', 'Bootstrap'],
-        description: 'A dynamic tour guide platform built with Django, PostgreSQL, and Bootstrap, featuring destination listings, travel packages, booking forms, and an admin panel to manage tours, blog content, and user inquiries.',
-        link: 'https://exploreknownworld.com/',
-    }
-
-
+  {
+    id: 1,
+    image: '/images/portfolio/clarvo.png',
+    title: 'Clarvo',
+    category: 'B2C · Legal tech',
+    tagline: 'AI-powered visa application platform for consumers',
+    stack: ['Next.js', 'Django', 'PostgreSQL', 'Claude', 'OpenAI API', 'AI'],
+    description:
+      'Full-stack consumer web app that streamlines visa applications with status tracking, document uploads, assessments, appointment scheduling, and secure AI-assisted communication.',
+    link: 'https://clarvo.us/',
+    featured: true,
+  },
+  {
+    id: 2,
+    image: '/images/portfolio/casenexus.png',
+    title: 'CaseNexus',
+    category: 'B2B · Legal tech',
+    tagline: 'Enterprise visa workflow platform for firms & agencies',
+    stack: ['Next.js', 'Django', 'PostgreSQL', 'Claude', 'OpenAI API', 'AI'],
+    description:
+      'B2B platform for law firms and immigration agencies—case management, client portals, document workflows, and AI tools integrated with third-party APIs.',
+    link: 'https://casenexus.us/',
+    featured: true,
+  },
+  {
+    id: 8,
+    image: '/images/portfolio/ecommerce.png',
+    title: 'Nextera Demo Store',
+    category: 'SaaS · E-commerce',
+    tagline: 'Multi-category demo storefront with deals, categories & checkout',
+    stack: ['Next.js', 'PostgreSQL', 'Tailwind CSS', 'Multi-tenant SaaS'],
+    description:
+      'Live SaaS demo of a modern online retail platform—electronics, fashion, grocery, home & kitchen, and more. Includes trending products, hot deals, new arrivals, and BDT pricing with delivery messaging.',
+    link: 'https://demo.app.nexterasotech.com/',
+    isDemo: true,
+  },
+  {
+    id: 9,
+    image: '/images/portfolio/clinic.png',
+    title: 'ClinicCare',
+    category: 'SaaS · Healthcare',
+    tagline: 'Clinic & diagnostic center software for Bangladesh',
+    stack: ['Next.js', 'Django', 'PostgreSQL', 'Role-based access'],
+    description:
+      'SaaS platform for clinics and diagnostic centers—patient flow, appointments, billing, and operational dashboards tailored for healthcare providers in Bangladesh.',
+    link: 'https://clinic.nexterasotech.com/dashboard',
+    isDemo: true,
+  },
+  {
+    id: 10,
+    image: '/images/portfolio/school.png',
+    title: 'EduManage',
+    category: 'SaaS · Education',
+    tagline: 'School management system for Bangladesh',
+    stack: ['Next.js', 'Django', 'PostgreSQL', 'Admin portal'],
+    description:
+      'End-to-end school management with a public school portal and a full admin dashboard—student records, staff workflows, and institution operations in one SaaS product.',
+    link: 'https://dhaka-model-school.school.nexterasotech.com/',
+    adminLink: 'https://dhaka-model-school.school.nexterasotech.com/admin',
+    isDemo: true,
+  },
+  {
+    id: 3,
+    image: '/images/portfolio/kotha.png',
+    title: 'Kotha',
+    category: 'Social · Lifestyle',
+    tagline: 'Voice-first social network with real-time chat',
+    stack: ['Next.js', 'WebSockets'],
+    description:
+      'Social platform with voice posts, communities, and live chat. Built for engagement with WebSocket-backed messaging and a modern web experience.',
+    link: 'https://web.kotha.app/',
+  },
+  {
+    id: 4,
+    image: '/images/portfolio/deshishad.png',
+    title: 'Deshi Shad',
+    category: 'E-commerce',
+    tagline: 'Full online store with Stripe checkout',
+    stack: ['Next.js', 'Django', 'Stripe', 'Django REST'],
+    description:
+      'Complete e-commerce solution with product catalog, secure checkout, order management, and admin tools for a US-based retail brand.',
+    link: 'https://www.deshishadusa.com',
+  },
+  {
+    id: 7,
+    image: '/images/portfolio/bakingtoolbox.png',
+    title: 'Baking Toolbox',
+    category: 'E-commerce · Retail',
+    tagline: '2000+ baking products with nationwide delivery across Bangladesh',
+    stack: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Shadcn UI', 'Lucide'],
+    description:
+      'Full-scale baking supplies storefront with rich category navigation, product catalog, cart, and checkout—including cash on delivery. Backend supports multi-store operations, warehouse management, and inventory control via an admin panel.',
+    link: 'https://bakingtoolbox.vercel.app/',
+  },
+  {
+    id: 5,
+    image: '/images/portfolio/inventory.png',
+    title: 'Inventory Management',
+    category: 'Operations · B2B',
+    tagline: 'Real-time warehouse & stock control',
+    stack: ['Django', 'PostgreSQL'],
+    description:
+      'Inventory system with live stock tracking, supplier management, purchase history, and role-based access for streamlined warehouse operations.',
+    link: 'https://kdelight.info/admin/',
+  },
+  {
+    id: 6,
+    image: '/images/portfolio/tourist.png',
+    title: 'Tour Guide Website',
+    category: 'Travel · Tourism',
+    tagline: 'Bookings, packages & content CMS',
+    stack: ['Django', 'PostgreSQL', 'Bootstrap'],
+    description:
+      'Tour guide platform with destination listings, travel packages, booking forms, and an admin panel for tours, blog content, and inquiries.',
+    link: 'https://exploreknownworld.com/',
+  },
 ]

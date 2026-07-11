@@ -8,10 +8,11 @@ export const data: Array<Course> = [
     rating: 5,
     ratingCount: 8,
     price: 25,
-    category: 'Beginner',
-    description:'Full-stack web development using Next.js for the frontend and Django for the backend — delivering fast, SEO-friendly, and secure applications.'
+    category: 'Core service',
+    description:
+      'Full-stack web applications with Next.js and Django—fast, SEO-friendly frontends paired with secure, scalable APIs and admin panels.',
+    highlights: ['Responsive UI & dashboards', 'REST & GraphQL APIs', 'Auth, roles & permissions'],
   },
-
   {
     id: 3,
     cover: '/images/courses/christopher-gower-m_HRfLhgABo-unsplash.jpg',
@@ -19,8 +20,10 @@ export const data: Array<Course> = [
     rating: 4,
     ratingCount: 7,
     price: 30,
-    category: 'Beginner',
-    description:'We integrate Python-powered machine learning models into Django backends and visualize data interactively with dynamic Next.js dashboards.'
+    category: 'High demand',
+    description:
+      'Integrate OpenAI, Claude, and custom Python models into your product—chat assistants, document processing, and workflow automation.',
+    highlights: ['ChatGPT & Claude APIs', 'Document & form automation', 'Smart search & recommendations'],
   },
   {
     id: 4,
@@ -29,8 +32,10 @@ export const data: Array<Course> = [
     rating: 4,
     ratingCount: 12,
     price: 30,
-    category: 'Intermediate',
-    description:'Scalable deployments with Docker, Nginx, PostgreSQL, and CI/CD pipelines. We host and manage your Django + Next.js apps on AWS, GCP, or Azure.'
+    category: 'Infrastructure',
+    description:
+      'Production deployments with Docker, Nginx, PostgreSQL, and CI/CD. We host and manage Django + Next.js apps on AWS, GCP, or Azure.',
+    highlights: ['Docker & containerization', 'Staging & production pipelines', 'Monitoring & backups'],
   },
   {
     id: 5,
@@ -39,8 +44,9 @@ export const data: Array<Course> = [
     rating: 4,
     ratingCount: 32,
     price: 35,
-    category: 'Intermediate',
-    description:'Build cross-platform mobile apps powered by Django REST APIs and Flutter or React Native for seamless Android and iOS experiences.'
+    category: 'Cross-platform',
+    description:
+      'Cross-platform mobile apps powered by Django REST APIs and Flutter or React Native for seamless Android and iOS experiences.',
+    highlights: ['iOS & Android from one codebase', 'Offline-ready mobile UX', 'Push notifications & deep links'],
   },
-
 ]

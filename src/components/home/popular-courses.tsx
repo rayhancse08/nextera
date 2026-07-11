@@ -129,7 +129,7 @@ const HomePopularCourse: FC = () => {
                 Services built for scale
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ maxWidth: 320 }}>
-                From discovery to launch, we align engineering with your roadmap.
+                Web apps, AI integrations, cloud deployment, and mobile—scoped to your stage and budget.
               </Typography>
             </Box>
           </Grid>
