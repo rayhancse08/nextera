@@ -11,8 +11,6 @@ const footerLinks: { label: string; to: string }[] = [
   { label: 'Home', to: 'hero' },
   { label: 'About', to: 'about' },
   { label: 'Services', to: 'services' },
-  { label: 'Why us', to: 'why-us' },
-  { label: 'Process', to: 'process' },
   { label: 'Portfolio', to: 'portfolio' },
   { label: 'Team', to: 'team' },
   { label: 'Contact', to: 'contact' },

@@ -5,7 +5,15 @@ import { navigations } from './navigation.data'
 
 const Navigation: FC = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: { xs: 'stretch', md: 'center' } }}>
+    <Box
+      component="nav"
+      sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        alignItems: 'center',
+        gap: { xs: 1, md: 0.25 },
+      }}
+    >
       {navigations.map(({ path: destination, label }) => (
         <Box
           component={ScrollLink}
@@ -14,41 +22,28 @@ const Navigation: FC = () => {
           to={destination}
           spy
           smooth
-          duration={350}
-          offset={-72}
+          duration={450}
+          offset={-88}
           sx={{
-            position: 'relative',
             color: 'text.secondary',
             cursor: 'pointer',
             fontWeight: 600,
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
-            px: { xs: 0, md: 2.5 },
-            py: { xs: 0, md: 0.5 },
-            mb: { xs: 3, md: 0 },
-            fontSize: { xs: '1.1rem', md: '0.95rem' },
-            letterSpacing: 0.2,
-            transition: (theme) => theme.transitions.create(['color']),
-            '&::after': {
-              content: '""',
-              position: 'absolute',
-              left: { xs: '50%', md: 12 },
-              transform: { xs: 'translateX(-50%)', md: 'none' },
-              bottom: { xs: -8, md: -4 },
-              width: { xs: 32, md: 'calc(100% - 24px)' },
-              height: 3,
-              borderRadius: 2,
-              bgcolor: 'primary.main',
-              opacity: 0,
-              transition: (theme) => theme.transitions.create(['opacity']),
-            },
+            px: { xs: 3, md: 1.5, lg: 2 },
+            py: { xs: 1, md: 0.75 },
+            borderRadius: '999px',
+            fontSize: { xs: '1.35rem', md: '0.9rem' },
+            whiteSpace: 'nowrap',
+            transition: 'color 0.2s ease, background-color 0.2s ease',
             '&.current': {
               color: 'primary.dark',
-              '&::after': { opacity: 1 },
+              bgcolor: 'rgba(13, 148, 136, 0.1)',
             },
             '&:hover': {
-              color: 'primary.main',
+              color: 'text.primary',
+              bgcolor: 'rgba(15, 23, 42, 0.05)',
             },
           }}
         >

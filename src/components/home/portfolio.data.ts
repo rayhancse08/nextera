@@ -80,18 +80,18 @@ export const data = [
     stack: ['Next.js', 'Django', 'Stripe', 'Django REST'],
     description:
       'Complete e-commerce solution with product catalog, secure checkout, order management, and admin tools for a US-based retail brand.',
-    link: 'https://www.deshishadusa.com',
+    link: 'https://deshishadusa.com/',
   },
   {
     id: 7,
     image: '/images/portfolio/bakingtoolbox.png',
     title: 'Baking Toolbox',
     category: 'E-commerce · Retail',
-    tagline: '2000+ baking products with nationwide delivery across Bangladesh',
+    tagline: '3000+ baking products with nationwide delivery across Bangladesh',
     stack: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Shadcn UI', 'Lucide'],
     description:
       'Full-scale baking supplies storefront with rich category navigation, product catalog, cart, and checkout—including cash on delivery. Backend supports multi-store operations, warehouse management, and inventory control via an admin panel.',
-    link: 'https://bakingtoolbox.vercel.app/',
+    link: 'https://bakingtoolbox.com/',
   },
   {
     id: 5,
